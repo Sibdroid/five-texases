@@ -26,7 +26,7 @@ def main() -> None:
             utils.combine_images([f"{year}-map.png", f"{year}-chart.png"],
                                  f"{year}.png")
             utils.add_text(f"{year}.png", (1100, 50), f"{state}, {year}",
-                           "Roboto-Regular.ttf", 40, fill=(0, 0, 0))
+                           "Roboto-Regular.ttf", 45, fill=(0, 0, 0))
             file_names += [f"{year}.png"] 
         utils.make_gif(file_names, f"{state}.gif")  
         print(f"{state} done")
