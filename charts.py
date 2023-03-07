@@ -122,13 +122,13 @@ def create_chart(values: t.List[t.List[float]],
         colors[i][row_number] = [BLUE, RED][i]
     ax = draw_bar_chart(YEARS, values, colors, ax)
     ax = add_annot(f"   {round(values[0][row_number], 2)}%", row_number, ax,
-                   size = 17, fontfamily="Roboto")
+                   size = 19, fontfamily="Roboto")
     ax = add_annot(f"   {round(values[1][row_number], 2)}%", row_number+6, ax,
-                   size = 17, fontfamily="Roboto")
+                   size = 19, fontfamily="Roboto")
     for i in ["top", "right", "left", "bottom"]:
         ax.spines[i].set_visible(False)
     ax.tick_params(axis="both", which="major", length=0,
-                   labelsize=17)
+                   labelsize=19)
     ax.set_xticks([])
     ax.margins(x=0, y=0)
     ax.invert_yaxis()
